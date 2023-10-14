@@ -1,0 +1,21 @@
+{
+  "name": "bcrypt_password",
+  "version": "1.0.0",
+  "description": "You can generate encrypted password and check it with password. you can also use [golang bcrypt](https://pkg.go.dev/golang.org/x/crypto/bcrypt) to check them with hashed password from other library like [bcrypt-ruby](https://github.com/bcrypt-ruby/bcrypt-ruby) used by [devise](https://github.com/heartcombo/devise).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/node": "^20.8.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1"
+  }
+}
