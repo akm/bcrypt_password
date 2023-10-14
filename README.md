@@ -40,3 +40,22 @@ OK
 $ npx ts-node src/compare.ts '$2b$10$H/5ewoLvg9DEjevj5pmTyeJ1lk.VLlNfIZgRpTmEujurX3sEpZUxi' 'Passw0rd!x'
 NG
 ```
+
+
+## Ruby
+
+```
+$ ruby digest.rb 'Passw0rd!'                                                                
+$2a$12$PvsXSjNe7nADqT5X.hq2AudHWwigzol7hFW3SVi0ihSAyGhUDZhKq
+$ ruby digest.rb 'Passw0rd!'
+$2a$12$7kXOesONnJXA9XsCbXIT8ulT/VbTeWmltMwOP1Qmjeg3pv2iYQQQ.
+```
+
+```
+$ ruby compare.rb '$2a$12$PvsXSjNe7nADqT5X.hq2AudHWwigzol7hFW3SVi0ihSAyGhUDZhKq' 'Passw0rd!'
+true
+$ ruby compare.rb '$2a$12$7kXOesONnJXA9XsCbXIT8ulT/VbTeWmltMwOP1Qmjeg3pv2iYQQQ.' 'Passw0rd!'
+true
+$ ruby compare.rb '$2a$12$7kXOesONnJXA9XsCbXIT8ulT/VbTeWmltMwOP1Qmjeg3pv2iYQQQ.' 'Passw0rd!x'
+false
+```
