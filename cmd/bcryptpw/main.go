@@ -10,7 +10,7 @@ import (
 
 func main() {
 	rootCmd := &cobra.Command{Use: "bcryptpw", Version: bcrypwpassword.Version}
-	rootCmd.AddCommand(Digest())
+	rootCmd.AddCommand(Digest(), Compare())
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Fprintf(os.Stderr, "%+v\n", err)
 		os.Exit(1)
