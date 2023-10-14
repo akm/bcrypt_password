@@ -59,3 +59,67 @@ true
 $ ruby compare.rb '$2a$12$7kXOesONnJXA9XsCbXIT8ulT/VbTeWmltMwOP1Qmjeg3pv2iYQQQ.' 'Passw0rd!x'
 false
 ```
+
+
+## Test
+
+test.rb checks hashed password by each other.
+
+```
+$ ruby test.rb
+password:Passw0rd!      digest_by:golang        compare_by:golang       valid_password: true
+password:Passw0rd!      digest_by:golang        compare_by:golang       invalid_password: false
+password:Passw0rd!      digest_by:golang        compare_by:nodejs       valid_password: true
+password:Passw0rd!      digest_by:golang        compare_by:nodejs       invalid_password: false
+password:Passw0rd!      digest_by:golang        compare_by:ruby valid_password: true
+password:Passw0rd!      digest_by:golang        compare_by:ruby invalid_password: false
+password:Passw0rd!      digest_by:nodejs        compare_by:golang       valid_password: true
+password:Passw0rd!      digest_by:nodejs        compare_by:golang       invalid_password: false
+password:Passw0rd!      digest_by:nodejs        compare_by:nodejs       valid_password: true
+password:Passw0rd!      digest_by:nodejs        compare_by:nodejs       invalid_password: false
+password:Passw0rd!      digest_by:nodejs        compare_by:ruby valid_password: true
+password:Passw0rd!      digest_by:nodejs        compare_by:ruby invalid_password: false
+password:Passw0rd!      digest_by:ruby  compare_by:golang       valid_password: true
+password:Passw0rd!      digest_by:ruby  compare_by:golang       invalid_password: false
+password:Passw0rd!      digest_by:ruby  compare_by:nodejs       valid_password: true
+password:Passw0rd!      digest_by:ruby  compare_by:nodejs       invalid_password: false
+password:Passw0rd!      digest_by:ruby  compare_by:ruby valid_password: true
+password:Passw0rd!      digest_by:ruby  compare_by:ruby invalid_password: false
+password:%P@ssw0rd%     digest_by:golang        compare_by:golang       valid_password: true
+password:%P@ssw0rd%     digest_by:golang        compare_by:golang       invalid_password: false
+password:%P@ssw0rd%     digest_by:golang        compare_by:nodejs       valid_password: true
+password:%P@ssw0rd%     digest_by:golang        compare_by:nodejs       invalid_password: false
+password:%P@ssw0rd%     digest_by:golang        compare_by:ruby valid_password: true
+password:%P@ssw0rd%     digest_by:golang        compare_by:ruby invalid_password: false
+password:%P@ssw0rd%     digest_by:nodejs        compare_by:golang       valid_password: true
+password:%P@ssw0rd%     digest_by:nodejs        compare_by:golang       invalid_password: false
+password:%P@ssw0rd%     digest_by:nodejs        compare_by:nodejs       valid_password: true
+password:%P@ssw0rd%     digest_by:nodejs        compare_by:nodejs       invalid_password: false
+password:%P@ssw0rd%     digest_by:nodejs        compare_by:ruby valid_password: true
+password:%P@ssw0rd%     digest_by:nodejs        compare_by:ruby invalid_password: false
+password:%P@ssw0rd%     digest_by:ruby  compare_by:golang       valid_password: true
+password:%P@ssw0rd%     digest_by:ruby  compare_by:golang       invalid_password: false
+password:%P@ssw0rd%     digest_by:ruby  compare_by:nodejs       valid_password: true
+password:%P@ssw0rd%     digest_by:ruby  compare_by:nodejs       invalid_password: false
+password:%P@ssw0rd%     digest_by:ruby  compare_by:ruby valid_password: true
+password:%P@ssw0rd%     digest_by:ruby  compare_by:ruby invalid_password: false
+password:AiY5jahg9ohx2yei       digest_by:golang        compare_by:golang       valid_password: true
+password:AiY5jahg9ohx2yei       digest_by:golang        compare_by:golang       invalid_password: false
+password:AiY5jahg9ohx2yei       digest_by:golang        compare_by:nodejs       valid_password: true
+password:AiY5jahg9ohx2yei       digest_by:golang        compare_by:nodejs       invalid_password: false
+password:AiY5jahg9ohx2yei       digest_by:golang        compare_by:ruby valid_password: true
+password:AiY5jahg9ohx2yei       digest_by:golang        compare_by:ruby invalid_password: false
+password:AiY5jahg9ohx2yei       digest_by:nodejs        compare_by:golang       valid_password: true
+password:AiY5jahg9ohx2yei       digest_by:nodejs        compare_by:golang       invalid_password: false
+password:AiY5jahg9ohx2yei       digest_by:nodejs        compare_by:nodejs       valid_password: true
+password:AiY5jahg9ohx2yei       digest_by:nodejs        compare_by:nodejs       invalid_password: false
+password:AiY5jahg9ohx2yei       digest_by:nodejs        compare_by:ruby valid_password: true
+password:AiY5jahg9ohx2yei       digest_by:nodejs        compare_by:ruby invalid_password: false
+password:AiY5jahg9ohx2yei       digest_by:ruby  compare_by:golang       valid_password: true
+password:AiY5jahg9ohx2yei       digest_by:ruby  compare_by:golang       invalid_password: false
+password:AiY5jahg9ohx2yei       digest_by:ruby  compare_by:nodejs       valid_password: true
+password:AiY5jahg9ohx2yei       digest_by:ruby  compare_by:nodejs       invalid_password: false
+password:AiY5jahg9ohx2yei       digest_by:ruby  compare_by:ruby valid_password: true
+password:AiY5jahg9ohx2yei       digest_by:ruby  compare_by:ruby invalid_password: false
+All OK
+```
