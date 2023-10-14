@@ -7,3 +7,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 # gem "rails"
 
 gem "devise", "~> 4.9"
+
+gem "activemodel", "~> 7.1"
